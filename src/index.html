@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./output.css">
+    <title>Music Player</title>
+</head>
+
+<body class="h-screen w-full flex justify-center items-center bg-gradient-to-r from-violet-200 to-pink-200">
+
+    <div
+        class="bg-white/10 backdrop-blur-xs h-[32rem] w-[28rem] rounded-3xl shadow-2xl shadow-pink-400 flex flex-col justify-center items-center p-6 space-y-2">
+        <img src="./Images/Hanuman.jpg" alt="img" class="h-64 w-auto rounded-2xl shadow-2xl shadow-black">
+
+        <h1 class="text-3xl font-semibold text-gray-700 mt-5">Hanuman Chalisa</h1>
+
+        <p class="text-sm text-gray-400">Artist Name</p>
+
+
+        <audio id="audio" src="./Music/SpotiDownloader.com - Hanuman Chalisa (From _HanuMan_) [Hindi] - GowraHari.mp3"
+            class=""></audio>
+        <button id="playBtn" class="mt-4 bg-blue-600 px-4 py-2 rounded text-white text-lg">
+            ▶️
+        </button>
+        <input id="progress" type="range" value="0" class="w-full mt-4 accent-blue-500">
+
+
+    </div>
+</body>
+
+</html>
