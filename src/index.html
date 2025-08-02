@@ -6,28 +6,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./output.css">
     <title>Music Player</title>
+    <script src="https://kit.fontawesome.com/26fee2916f.js" crossorigin="anonymous"></script>
 </head>
 
-<body class="h-screen w-full flex justify-center items-center bg-gradient-to-r from-violet-200 to-pink-200">
+<body class="h-screen w-full flex justify-center items-center bg-[#0a0a0a] font-Geist">
 
     <div
-        class="bg-white/10 backdrop-blur-xs h-[32rem] w-[28rem] rounded-3xl shadow-2xl shadow-pink-400 flex flex-col justify-center items-center p-6 space-y-2">
-        <img src="./Images/Hanuman.jpg" alt="img" class="h-64 w-auto rounded-2xl shadow-2xl shadow-black">
+        class="bg-white/10 backdrop-blur-xs h-[32rem] w-[24rem] rounded-3xl shadow-2xl flex flex-col justify-center items-center p-6 space-y-2 font-Geist border border-white/20 shadow-white/20 shadow-XL">
+        <img src="./Images/Cover of Aaj Ki Raat (From _Stree 2_) by Sachin-Jigar, Amitabh Bhattacharya.jpg" alt="img" class="h-48 w-auto rounded-full shadow-2xl">
 
-        <h1 class="text-3xl font-semibold text-gray-700 mt-5">Hanuman Chalisa</h1>
+        <h1 class="text-2xl font-semibold text-[#ffffff] mt-5">Hanuman Chalisa</h1>
 
         <p class="text-sm text-gray-400">Artist Name</p>
 
-
-        <audio id="audio" src="./Music/SpotiDownloader.com - Hanuman Chalisa (From _HanuMan_) [Hindi] - GowraHari.mp3"
+        <audio id="audio" src="./Music/SpotiDownloader.com - Aaj Ki Raat (From _Stree 2_) - Sachin-Jigar.mp3"
             class=""></audio>
-        <button id="playBtn" class="mt-4 bg-blue-600 px-4 py-2 rounded text-white text-lg">
-            ▶️
-        </button>
-        <input id="progress" type="range" value="0" class="w-full mt-4 accent-blue-500">
+
+        <input id="progress" type="range" value="0" min="0" max="100"
+            class="appearance-none bg-white/10 w-full h-[6px] cursor-pointer rounded-full mt-4 accent-white"
+            oninput="this.style.background = `linear-gradient(to right, white 0%, white ${this.value}%, rgba(255,255,255,0.1) ${this.value}%, rgba(255,255,255,0.1) 100%)`" />
+
+        <div class="flex justify-between text-xs text-gray-400 mt-2 w-full">
+            <span>1:23</span>
+            <span>3:45</span>
+        </div>
+
+        <div class="text-3xl flex justify-center items-center gap-10 mt-2 mb-2">
+
+            <!-- Previous Button -->
+            <div
+                class="w-12 h-12 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center cursor-pointer transition-all duration-200 hover:scale-105">
+                <i class="fa-solid fa-angle-left text-white text-sm"></i>
+            </div>
+
+            <!-- Play Button -->
+            <div id="playBtn"
+                class="w-16 h-16 rounded-full bg-white hover:bg-white/90 flex items-center justify-center cursor-pointer transition-all duration-200 hover:scale-105 shadow-lg">
+                <i id="playIcon" class="fa-solid fa-play text-black text-sm"></i>
+            </div>
+
+            <!-- Next Button -->
+            <div
+                class="w-12 h-12 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center cursor-pointer transition-all duration-200 hover:scale-105">
+                <i class="fa-solid fa-angle-right text-white text-sm"></i>
+            </div>
+
+        </div>
 
 
     </div>
+    <script src="script.js"></script>
 </body>
 
 </html>
